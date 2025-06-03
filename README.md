@@ -6,6 +6,8 @@ En este repositorio, se presenta el sitio web realizado durante el curso de prog
 ### 📄 Entregas
 **Entrega #1**: planificación de la solución y primeros resultados que obtengamos con la IA:
 
+---
+
 ## 🔍 Definición de la problemática
 
 **La creciente vulnerabilidad de los barrios de la Ciudad y la Provincia de Buenos Aires frente a las inundaciones, y la falta de acceso a información clara, localizada y actualizada para prevenir y actuar frente a estas situaciones.**
@@ -49,6 +51,8 @@ Estamos desarrollando una **plataforma web interactiva** orientada a brindar inf
 
 - 🧠 **Sección educativa y de concientización**  
   Recursos visuales e interactivos (videos, infografías, juegos) orientados especialmente a escuelas y comunidades barriales.
+ 
+---
 
 🎨 Moodboard
 
