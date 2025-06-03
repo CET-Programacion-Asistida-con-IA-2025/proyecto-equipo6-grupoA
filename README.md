@@ -50,9 +50,6 @@ Estamos desarrollando una **plataforma web interactiva** orientada a brindar inf
 - 🧠 **Sección educativa y de concientización**  
   Recursos visuales e interactivos (videos, infografías, juegos) orientados especialmente a escuelas y comunidades barriales.
 
-> ⚠️ *La inteligencia artificial es una herramienta complementaria:* se utiliza para analizar reportes, resumir textos técnicos y generar recomendaciones por zona, pero no reemplaza la validación humana ni la participación comunitaria.
-
-
 🎨 Moodboard
 
 🧩 Archivos generados con asistencia de IA: ```index.html```, ```style.css```, ```script.js```
