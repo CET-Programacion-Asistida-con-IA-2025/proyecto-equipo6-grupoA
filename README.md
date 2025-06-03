@@ -6,12 +6,52 @@ En este repositorio, se presenta el sitio web realizado durante el curso de prog
 ### 📄 Entregas
 **Entrega #1**: planificación de la solución y primeros resultados que obtengamos con la IA:
 
-📝 Edición del Archivo README incluyendo:
-- Definición de la problemática que eligieron abordar
-- Relación con los *Objetivos de Desarrollo Sostenible (ODS)*[^1]
-- Explicación de la solución tecnológica que están desarrollando
-> [!TIP]
-> Aprovechen los [formatos del README](https://docs.github.com/es/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) para escribir diferentes secciones
+## 🔍 Definición de la problemática
+
+**La creciente vulnerabilidad de los barrios de la Ciudad y la Provincia de Buenos Aires frente a las inundaciones, y la falta de acceso a información clara, localizada y actualizada para prevenir y actuar frente a estas situaciones.**
+
+Durante los últimos años, distintos municipios de Buenos Aires —desde zonas densamente pobladas como **La Matanza**, hasta barrios de **CABA como La Boca o Villa Lugano**, y ciudades como **Bahía Blanca**— han sido gravemente afectados por inundaciones causadas por lluvias intensas, desbordes de ríos y deficiencias en los sistemas de desagüe. 
+
+Muchas veces, los vecinos no cuentan con herramientas ni canales informativos accesibles para prevenir, actuar o recuperarse ante estos eventos. Esta problemática no solo pone en riesgo bienes materiales, sino también la salud, la seguridad y el bienestar de miles de personas, especialmente en comunidades vulnerables.
+
+---
+
+## 🌍 Relación con los *Objetivos de Desarrollo Sostenible (ODS)*
+
+Este proyecto contribuye a varios ODS de la Agenda 2030:
+
+- **ODS 11 - Ciudades y comunidades sostenibles**  
+  Mejora el acceso a información para fortalecer la resiliencia frente a emergencias urbanas.
+
+- **ODS 13 - Acción por el clima**  
+  Provee herramientas tecnológicas para la adaptación a eventos climáticos extremos.
+
+- **ODS 9 - Industria, innovación e infraestructura**  
+  Aplica innovación y tecnología (IA, datos abiertos, visualizaciones) para resolver una problemática social concreta.
+
+---
+
+## 💡 Solución tecnológica propuesta
+
+Estamos desarrollando una **plataforma web interactiva** orientada a brindar información útil, localizada y en tiempo real sobre las inundaciones en Buenos Aires (Ciudad y Provincia). Las funcionalidades principales incluyen:
+
+- 🗺️ **Mapa interactivo de riesgo por zonas**  
+  Basado en datos públicos y análisis con IA para detectar patrones históricos y zonas críticas.
+
+- 📚 **Guías prácticas para vecinos**  
+  Instrucciones claras sobre qué hacer antes, durante y después de una inundación. Incluye armado de kits de emergencia y contactos útiles.
+
+- 📣 **Sistema de reporte vecinal en tiempo real**  
+  Los usuarios podrán subir fotos o alertas de problemas como desagües tapados o calles anegadas. IA ayudará a filtrar duplicados y priorizar información crítica.
+
+- 📰 **Noticias y actualizaciones oficiales**  
+  Publicaciones desde fuentes gubernamentales o medios confiables, con resúmenes generados por IA para facilitar su comprensión.
+
+- 🧠 **Sección educativa y de concientización**  
+  Recursos visuales e interactivos (videos, infografías, juegos) orientados especialmente a escuelas y comunidades barriales.
+
+> ⚠️ *La inteligencia artificial es una herramienta complementaria:* se utiliza para analizar reportes, resumir textos técnicos y generar recomendaciones por zona, pero no reemplaza la validación humana ni la participación comunitaria.
+
 
 🎨 Moodboard
 
