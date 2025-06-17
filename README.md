@@ -1,10 +1,7 @@
-## Grupo A - Equipo 6
-_Curso de Programación Asistida con IA - Chicas en Tecnología_ 🚀
+# 💧 Inundaciones BA – Grupo A, Equipo 6  
+_Curso de Programación Asistida con IA – Chicas en Tecnología_ 🚀
 
-En este repositorio, se presenta el sitio web realizado durante el curso de programación frontend de CET.
-
-### 📄 Entregas
-**Entrega #1**: planificación de la solución y primeros resultados que obtengamos con la IA:
+Este repositorio contiene el desarrollo de una **plataforma web interactiva** creada durante el curso de programación frontend de Chicas en Tecnología. El objetivo es brindar información útil, localizada y accesible sobre el riesgo de inundaciones en barrios de la Ciudad y la Provincia de Buenos Aires.
 
 ---
 
@@ -37,18 +34,51 @@ Este proyecto contribuye a varios ODS de la Agenda 2030:
 
 Estamos desarrollando una **plataforma web interactiva** orientada a brindar información útil, localizada y en tiempo real sobre las inundaciones en Buenos Aires (Ciudad y Provincia). Las funcionalidades principales incluyen:
 
-- 🗺️ **Mapa interactivo de riesgo por zonas**  
-  Basado en datos públicos y análisis con IA para detectar patrones históricos y zonas críticas.
+- 🗺️ **Mapa interactivo de riesgo**  
+  Simula un mapa que en el futuro integrará datos reales mediante una API de mapas (como Leaflet o Mapbox) para visualizar zonas críticas.
 
-- 📚 **Guías prácticas para vecinos**  
-  Instrucciones claras sobre qué hacer antes, durante y después de una inundación. Incluye armado de kits de emergencia y contactos útiles.
+- 📚 **Guías de prevención**  
+  Consejos prácticos antes, durante y después de una inundación, con listas de chequeo y armado de kits de emergencia.
 
-- 📣 **Sistema de reporte vecinal en tiempo real**  
-  Los usuarios podrán subir fotos o alertas de problemas como desagües tapados o calles anegadas. IA ayudará a filtrar duplicados y priorizar información crítica.
+- 📣 **Sistema de reporte vecinal**  
+  Permite informar problemas como desagües tapados o cortes de luz. En futuras versiones se podrá guardar y visualizar en el mapa mediante una base de datos.
 
-- 📰 **Noticias y actualizaciones oficiales**  
-  Publicaciones desde fuentes gubernamentales o medios confiables, con resúmenes generados por IA para facilitar su comprensión.
+- 📰 **Noticias actualizadas**  
+  Sección pensada para mostrar alertas meteorológicas y resúmenes de noticias desde fuentes oficiales. Actualmente es una simulación generada por JavaScript, con la intención de conectar APIs externas más adelante.
 
-- 🧠 **Sección educativa y de concientización**  
-  Recursos visuales e interactivos (videos, infografías, juegos) orientados especialmente a escuelas y comunidades barriales. 
- 
+- 🎓 **Educación y concientización**  
+  Recursos pensados para escuelas y comunidades, como juegos, infografías y materiales visuales para comprender el fenómeno de las inundaciones y cómo actuar.
+
+- ⚠️ **Alertas meteorológicas simuladas**  
+  Se muestran alertas aleatorias que simulan una integración futura con fuentes oficiales (como SMN).
+
+---
+
+## 📁 Estructura del proyecto
+
+```plaintext
+📁 proyecto/
+├── index.html     # Página principal
+├── style.css      # Estilos personalizados
+├── script.js      # Funcionalidades interactivas
+├── README.md      # Este archivo
+
+---
+
+## 🚧 Estado actual
+
+El sitio se encuentra en una **versión demo funcional**, con simulaciones visuales y diseño completo. Algunas funcionalidades aún no están conectadas a datos reales, pero fueron estructuradas para permitir su futura integración mediante APIs externas o bases de datos.
+
+### 🔜 Próximas mejoras posibles
+
+- 🔗 Integrar datos reales en el mapa (con GeoJSON o API)
+- 📝 Guardar reportes vecinales (con LocalStorage o backend)
+- 📰 Mostrar noticias en tiempo real mediante una API externa
+- 🌙 Agregar modo oscuro automático y ajustes de accesibilidad
+
+---
+
+## 👩‍💻 Equipo de desarrollo
+
+**Grupo A – Equipo 6**  
+_Curso de Programación Asistida con IA – Chicas en Tecnología 2025_
