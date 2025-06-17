@@ -50,25 +50,5 @@ Estamos desarrollando una **plataforma web interactiva** orientada a brindar inf
   Publicaciones desde fuentes gubernamentales o medios confiables, con resúmenes generados por IA para facilitar su comprensión.
 
 - 🧠 **Sección educativa y de concientización**  
-  Recursos visuales e interactivos (videos, infografías, juegos) orientados especialmente a escuelas y comunidades barriales.
+  Recursos visuales e interactivos (videos, infografías, juegos) orientados especialmente a escuelas y comunidades barriales. 
  
----
-
-🎨 Moodboard
-
-🧩 Archivos generados con asistencia de IA: ```index.html```, ```style.css```, ```script.js```
-
-
-**Entrega #2 (Final)**: se esperan modificaciones en el código respecto a la entrega anterior, que pueden incluir nuevos archivos o extensión de los existentes (debe haber al menos un archivo de cada lenguaje visto - HTML, CSS y Javascript)
-
-💡 Es una buena idea llevar un registro de lo que cambiamos. Por ejemplo
-```
-- Agregamos Bootstrap para el carrousel de imágenes...
-- Modificamos el texto de la sección de bienvenida...
-- Transformamos los textos sobre redes sociales en links...
-```
-
-Ahora si, ¡A programar! 🚀
-
-
-[^1]: Los Objetivos de Desarrollo Sostenible u Objetivos Globales, también conocidos como Agenda 2030, son 17 objetivos globales interconectados diseñados para ser un «plan para lograr un futuro mejor y más sostenible para todos». Más información en https://www.un.org/sustainabledevelopment/es/objetivos-de-desarrollo-sostenible/
