@@ -62,7 +62,7 @@ Estamos desarrollando una **plataforma web interactiva** orientada a brindar inf
 ├── style.css      # Estilos personalizados
 ├── script.js      # Funcionalidades interactivas
 ├── README.md      # Este archivo
-
+```
 ---
 
 ## 🚧 Estado actual
