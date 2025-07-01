@@ -11,6 +11,36 @@ body {
   line-height: 1.6;
 }
 
+/* Estilo para el menú de navegación */
+.menu {
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.menu ul {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 15px 0;
+  margin: 0;
+  list-style: none;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #0077cc;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  transition: color 0.3s;
+}
+
+.menu li a:hover {
+  color: #ff8800;
+}
+
 .hero {
   background: linear-gradient(160deg, #42a5f5 0%, #0d47a1 100%);
   color: white;
