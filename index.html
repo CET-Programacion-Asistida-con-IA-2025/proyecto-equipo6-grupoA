@@ -1,90 +1,92 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inundaciones BA – Mapa, prevención y ayuda comunitaria</title>
-  <link rel="stylesheet" href="style.css">
-<!-- Leaflet CSS -->
-<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-<!-- Leaflet JS -->
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Inundaciones BA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <header>
-    <h1>Inundaciones BA</h1>
-    <p><strong>Mapa, prevención y ayuda comunitaria</strong></p>
+<nav class="menu">
+<ul>
+  <li><a href="#" onclick="cargarIframe('mapa-riesgo.html')">Mapa de Riesgo</a></li>
+  <li><a href="#" onclick="cargarIframe('guias-vecinales.html')">Guías Vecinales</a></li>
+  <li><a href="#" onclick="cargarIframe('reportes-ciudadanos.html')">Reportes</a></li>
+  <li><a href="#" onclick="cargarIframe('noticias.html')">Noticias</a></li>
+  <li><a href="#" onclick="cargarIframe('educacion.html')">Educación</a></li>
+  <li><a href="#" onclick="cargarIframe('alertas.html')">Alertas</a></li>
+</ul>
+</nav>
+
+<div id="contenido-principal">
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Prevenir Inundaciones, Proteger Comunidades</h1>
+      <p>Una plataforma para anticiparnos al riesgo y actuar con información clara y visual.</p>
+      <a href="#programa" class="btn">Conocé el Programa</a>
+    </div>
   </header>
 
-  <section id="presentacion">
-    <h2>Sobre este sitio</h2>
-    <p>
-      Bienvenidos a Inundaciones BA, una plataforma pensada para brindar información confiable y herramientas útiles frente al riesgo de inundaciones en distintos puntos de la Ciudad y la Provincia de Buenos Aires.
-    </p>
-    <p>
-      Este sitio fue creado como respuesta a la falta de recursos accesibles para anticiparse, actuar y recuperarse frente a eventos climáticos extremos que afectan especialmente a barrios como La Matanza, La Boca, Villa Lugano o Bahía Blanca.
-    </p>
-    <p>
-      A través de datos públicos, inteligencia artificial y la participación comunitaria, buscamos facilitar el acceso a información clara, actualizada y adaptada a cada zona.
-    </p>
+  <section class="intro">
+    <div class="container">
+      <h2>Nuestra Misión</h2>
+      <div class="mission">
+        <p><strong>Inundaciones BA</strong> nace como una iniciativa para brindar herramientas digitales y visuales que permitan prevenir inundaciones en barrios vulnerables de Buenos Aires. Apostamos a la tecnología, los datos abiertos y la participación comunitaria.</p>
+      </div>
+    </div>
   </section>
 
-  <section id="mapa">
-    <h2>Mapa interactivo de riesgo</h2>
-    <p>
-      Consultá en tiempo real un mapa interactivo que muestra las zonas con mayor riesgo de inundación. El sistema combina datos públicos con análisis realizados mediante inteligencia artificial para identificar áreas críticas y posibles puntos de conflicto en caso de lluvias intensas.
-    </p>
-    <p>
-      Podés explorar tu barrio, ver reportes actualizados de otros vecinos y acceder a recomendaciones personalizadas según tu ubicación.
-    </p>
+  <section class="programa" id="programa">
+    <div class="container">
+      <h2>Nuestro Programa</h2>
+      <div class="cards">
+        <div class="card" id="mapa-riesgo">
+          <h3>🗺️ Mapa de Riesgo</h3>
+          <p>Identificamos las zonas más vulnerables con visualizaciones interactivas.</p>
+        </div>
+        <div class="card" id="guias-vecinales">
+          <h3>📚 Guías Vecinales</h3>
+          <p>Pasos claros antes, durante y después de una emergencia hídrica.</p>
+        </div>
+        <div class="card" id="reportes-ciudadanos">
+          <h3>📢 Reportes Ciudadanos</h3>
+          <p>Canal para notificar en tiempo real situaciones críticas en tu barrio.</p>
+        </div>
+        <div class="card" id="noticias">
+          <h3>📰 Noticias actualizadas</h3>
+          <p>Sección pensada para mostrar alertas meteorológicas y resúmenes de noticias desde fuentes oficiales.</p>
+        </div>
+          <div class="card" id="educacion">
+        <h3>🎓 Educación y concientización</h3>
+        <p>Recursos pensados para escuelas y comunidades, como juegos, infografías y materiales visuales para comprender el fenómeno de las inundaciones y cómo actuar.</p>
+      </div>
+      <div class="card" id="alertas">
+        <h3>⚠️ Alertas meteorológicas simuladas</h3>
+        <p>Se muestran alertas aleatorias que simulan una integración futura con fuentes oficiales (como SMN).</p>
+      </div>
+      </div>
+    </div>
   </section>
 
-  <section id="guias">
-    <h2>Guías para estar preparados</h2>
-    <p>
-      Accedé a una serie de guías prácticas diseñadas para ayudarte antes, durante y después de una inundación. Encontrarás listas de verificación, consejos para proteger a tu familia y a tus mascotas, cómo preparar un kit de emergencia y contactos útiles organizados por zona.
-    </p>
-    <p>
-      Todo el contenido fue desarrollado junto a especialistas en gestión de emergencias y organizaciones barriales.
-    </p>
-  </section>
-
-  <section id="reporte">
-    <h2>Reportes vecinales</h2>
-    <p>
-      Este espacio permite que los usuarios informen problemas en sus barrios: desagües tapados, calles anegadas, cortes de luz, etc. Las alertas se visualizan en el mapa y ayudan a otros vecinos a prevenir riesgos.
-    </p>
-    <p>
-      Nuestro sistema procesa los reportes automáticamente para destacar los más relevantes y evitar duplicaciones.
-    </p>
-  </section>
-
-  <section id="noticias">
-    <h2>Actualizaciones y noticias</h2>
-    <p>
-      Mantenete informado con noticias actualizadas de fuentes oficiales y medios confiables. Las notas se resumen automáticamente para facilitar su lectura rápida desde cualquier dispositivo.
-    </p>
-    <p>
-      También vas a encontrar alertas meteorológicas, recomendaciones del gobierno y comunicados de defensa civil.
-    </p>
-  </section>
-
-  <section id="educacion">
-    <h2>Educación y concientización</h2>
-    <p>
-      En esta sección vas a encontrar recursos educativos para escuelas, familias y organizaciones comunitarias. Ofrecemos materiales visuales, juegos interactivos e infografías que explican de forma sencilla qué son las inundaciones, por qué ocurren y cómo podemos actuar para reducir su impacto.
-    </p>
-    <p>
-      Ideal para trabajar en el aula o en talleres barriales.
-    </p>
-  </section>
+  <section id="contenedor-seccion" style="display: none;">
+  <iframe id="iframe-seccion" src="" frameborder="0" style="width: 100%; height: 800px;"></iframe>
+</section>
 
   <footer>
-    <p>© 2025 Inundaciones BA – Proyecto comunitario desarrollado con asistencia de inteligencia artificial y participación ciudadana.</p>
+    <p>&copy; 2025 Inundaciones BA – Equipo 6A, Chicas en Tecnología</p>
+    <p><strong>Integrantes:</strong> Yanella · Jazmín · Martina · Morena · Megan · Shirley</p>
   </footer>
 
-<script src="script.js"></script>
+  <script src="script.js"></script>
+<script>
+  function cargarIframe(pagina) {
+    const contenedor = document.getElementById('contenedor-seccion');
+    const iframe = document.getElementById('iframe-seccion');
+    iframe.src = pagina;
+    contenedor.style.display = 'block'; // Mostrar el iframe
+    window.scrollTo({ top: contenedor.offsetTop, behavior: 'smooth' }); // Hace scroll hasta la sección
+  }
+</script>
 </body>
-</html>
