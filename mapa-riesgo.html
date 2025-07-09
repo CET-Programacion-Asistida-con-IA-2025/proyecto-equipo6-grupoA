@@ -2,22 +2,88 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mapa de Riesgo</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
 
-<section class="programa" id="programa">
-  <div class="container">
-    <div class="cards">
-      <div class="card" id="mapa-riesgo">
-        <h3>🗺️ Mapa de Riesgo</h3>
-        <p>Identificamos las zonas más vulnerables con visualizaciones interactivas.</p>
+  <!-- Tu CSS propio -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Leaflet CSS + JS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <!-- defer = se carga después de que el HTML está listo -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js" defer></script>
+</head>
+
+<body>
+  <!-- Sección “Programa” -->
+  <section class="programa" id="programa">
+    <div class="container">
+      <div class="cards">
+        <div class="card" id="mapa-riesgo">
+          <h3>🗺️ Mapa de Riesgo</h3>
+          <p>Identificamos las zonas más vulnerables con visualizaciones interactivas.</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
+  <!-- Contenedor del mapa -->
+  <section class="mapa">
+    <h2>Mapa de zonas inundables</h2>
+    <div id="map" style="height: 400px; width: 100%; border-radius: 10px;"></div>
+  </section>
+
+  <!-- Script del mapa -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1) Inicializar mapa centrado en CABA
+      const map = L.map('map').setView([-34.6037, -58.3816], 11);
+
+      // 2) Capa base
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap contributors'
+      }).addTo(map);
+
+      // 3) Zonas simuladas
+      const zonas = [
+        {
+          nombre: 'Villa Lugano',
+          coord: [-34.670, -58.460],
+          radio: 800,
+          color: 'red',
+          riesgo: 'moderado'
+        },
+        {
+          nombre: 'Barracas',
+          coord: [-34.633, -58.363],
+          radio: 600,
+          color: 'orange',
+          riesgo: 'alto'
+        },
+        {
+          nombre: 'Saavedra',
+          coord: [-34.563, -58.468],
+          radio: 500,
+          color: 'yellow',
+          riesgo: 'bajo'
+        }
+      ];
+
+      zonas.forEach(z => {
+        // Marcador
+        L.marker(z.coord)
+          .addTo(map)
+          .bindPopup(`<strong>${z.nombre}</strong><br>Riesgo ${z.riesgo}`);
+
+        // Círculo
+        L.circle(z.coord, {
+          color: z.color,
+          fillColor: z.color,
+          fillOpacity: 0.4,
+          radius: z.radio
+        }).addTo(map);
+      });
+    });
+  </script>
 </body>
 </html>
