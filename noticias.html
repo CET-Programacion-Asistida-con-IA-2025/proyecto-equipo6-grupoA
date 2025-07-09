@@ -3,21 +3,119 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Noticias</title>
+  <title>Noticias | Inundaciones BA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .noticia {
+      background: #f5f9ff;
+      padding: 1rem;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+    }
+    .noticia:hover {
+      transform: scale(1.02);
+    }
+    .noticia a {
+      font-weight: 600;
+      color: #007BFF;
+      font-size: 1.05rem;
+      text-decoration: none;
+    }
+    .noticia p {
+      font-size: 0.85rem;
+      color: #555;
+      margin-top: 4px;
+    }
+    .cards h3 {
+      font-size: 1.6rem;
+      margin-bottom: 0.5rem;
+    }
+    .cards p {
+      margin-bottom: 1.5rem;
+      color: #444;
+    }
+  </style>
 </head>
 <body>
+
+<!-- Menú principal -->
+<nav class="menu">
+  <ul>
+    <li><a href="#" onclick="cargarIframe('mapa-riesgo.html')">Mapa de Riesgo</a></li>
+    <li><a href="#" onclick="cargarIframe('guias-vecinales.html')">Guías Vecinales</a></li>
+    <li><a href="#" onclick="cargarIframe('reportes-ciudadanos.html')">Reportes</a></li>
+    <li><a href="#" onclick="cargarIframe('noticias.html')">Noticias</a></li>
+    <li><a href="#" onclick="cargarIframe('educacion.html')">Educación</a></li>
+    <li><a href="#" onclick="cargarIframe('alertas.html')">Alertas</a></li>
+  </ul>
+</nav>
+
+<!-- Encabezado común -->
+<div class="header">
+  <div class="wave"></div>
+  <h1>📰 Noticias sobre Inundaciones en BA</h1>
+  <p>Información actualizada para tu seguridad</p>
+</div>
 
 <section class="programa" id="programa">
   <div class="container">
     <div class="cards">
       <div class="card" id="noticias">
-        <h3>📰 Noticias actualizadas</h3>
-        <p>Sección pensada para mostrar alertas meteorológicas y resúmenes de noticias desde fuentes oficiales.</p>
+        <h3>🗞️ Noticias actualizadas</h3>
+        <p>Últimos reportes sobre lluvias, tormentas e inundaciones en Buenos Aires.</p>
+
+        <!-- Noticias simuladas -->
+        <div class="noticia">
+          <a href="#">🌧️ Inundaciones afectan varios barrios de CABA</a>
+          <p>9 de julio de 2025 - 09:30</p>
+        </div>
+        <div class="noticia">
+          <a href="#">⚠️ SMN emite alerta amarilla por tormentas intensas</a>
+          <p>8 de julio de 2025 - 18:00</p>
+        </div>
+        <div class="noticia">
+          <a href="#">🚨 Se refuerzan medidas de evacuación en zonas críticas</a>
+          <p>7 de julio de 2025 - 14:15</p>
+        </div>
+        <div class="noticia">
+          <a href="#">📢 Corte de calles en barrios afectados por anegamientos</a>
+          <p>7 de julio de 2025 - 10:30</p>
+        </div>
+        <div class="noticia">
+          <a href="#">💧 Se habilitan centros de asistencia para damnificados</a>
+          <p>6 de julio de 2025 - 17:45</p>
+        </div>
+        <div class="noticia">
+          <a href="#">🌩️ Pronóstico extendido: posibles tormentas para el fin de semana</a>
+          <p>6 de julio de 2025 - 09:00</p>
+        </div>
+        <div class="noticia">
+          <a href="#">🚧 Plan de drenaje acelerado en zonas críticas</a>
+          <p>5 de julio de 2025 - 20:10</p>
+        </div>
+        <div class="noticia">
+          <a href="#">📺 Recomendaciones del Gobierno ante lluvias intensas</a>
+          <p>5 de julio de 2025 - 08:30</p>
+        </div>
+
       </div>
     </div>
   </div>
 </section>
+
+<footer>
+  <p>&copy; 2025 Inundaciones BA – Equipo 6A, Chicas en Tecnología</p>
+  <p><strong>Integrantes:</strong> Yanella · Jazmín · Martina · Morena · Megan · Shirley</p>
+</footer>
+
+<script>
+  function cargarIframe(pagina) {
+    window.location.href = pagina;
+  }
+</script>
 
 </body>
 </html>

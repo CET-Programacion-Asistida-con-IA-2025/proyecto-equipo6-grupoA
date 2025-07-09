@@ -2,88 +2,61 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mapa de Riesgo</title>
-
-  <!-- Tu CSS propio -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nombre de la Página | Inundaciones BA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
-
-  <!-- Leaflet CSS + JS -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-  <!-- defer = se carga después de que el HTML está listo -->
-  <script src="https://unpkg.com/leaflet/dist/leaflet.js" defer></script>
+  <style>
+    .section-container {
+      background: #f5f9ff;
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      max-width: 800px;
+      margin: 2rem auto;
+    }
+    .section-container h3 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+    .section-container p {
+      font-size: 1rem;
+      color: #444;
+    }
+  </style>
 </head>
-
 <body>
-  <!-- Sección “Programa” -->
-  <section class="programa" id="programa">
-    <div class="container">
-      <div class="cards">
-        <div class="card" id="mapa-riesgo">
-          <h3>🗺️ Mapa de Riesgo</h3>
-          <p>Identificamos las zonas más vulnerables con visualizaciones interactivas.</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Contenedor del mapa -->
-  <section class="mapa">
-    <h2>Mapa de zonas inundables</h2>
-    <div id="map" style="height: 400px; width: 100%; border-radius: 10px;"></div>
-  </section>
+<!-- Menú superior -->
+<nav class="menu">
+  <ul>
+    <li><a href="mapa-riesgo.html">Mapa de Riesgo</a></li>
+    <li><a href="guias-vecinales.html">Guías Vecinales</a></li>
+    <li><a href="reportes-ciudadanos.html">Reportes</a></li>
+    <li><a href="noticias.html">Noticias</a></li>
+    <li><a href="educacion.html">Educación</a></li>
+    <li><a href="alertas.html">Alertas</a></li>
+  </ul>
+</nav>
 
-  <!-- Script del mapa -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      // 1) Inicializar mapa centrado en CABA
-      const map = L.map('map').setView([-34.6037, -58.3816], 11);
+<!-- Encabezado -->
+<div class="header">
+  <div class="wave"></div>
+  <h1>📌 Nombre de la Sección</h1>
+  <p>Descripción breve o eslogan de esta página</p>
+</div>
 
-      // 2) Capa base
-      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '© OpenStreetMap contributors'
-      }).addTo(map);
+<!-- Contenido principal -->
+<section class="section-container">
+  <h3>📍 Título destacado</h3>
+  <p>Texto o contenido principal de esta sección. Podés usar listas, imágenes, links o lo que necesites.</p>
+</section>
 
-      // 3) Zonas simuladas
-      const zonas = [
-        {
-          nombre: 'Villa Lugano',
-          coord: [-34.670, -58.460],
-          radio: 800,
-          color: 'red',
-          riesgo: 'moderado'
-        },
-        {
-          nombre: 'Barracas',
-          coord: [-34.633, -58.363],
-          radio: 600,
-          color: 'orange',
-          riesgo: 'alto'
-        },
-        {
-          nombre: 'Saavedra',
-          coord: [-34.563, -58.468],
-          radio: 500,
-          color: 'yellow',
-          riesgo: 'bajo'
-        }
-      ];
+<!-- Footer -->
+<footer>
+  <p>&copy; 2025 Inundaciones BA – Equipo 6A, Chicas en Tecnología</p>
+  <p><strong>Integrantes:</strong> Yanella · Jazmín · Martina · Morena · Megan · Shirley</p>
+</footer>
 
-      zonas.forEach(z => {
-        // Marcador
-        L.marker(z.coord)
-          .addTo(map)
-          .bindPopup(`<strong>${z.nombre}</strong><br>Riesgo ${z.riesgo}`);
-
-        // Círculo
-        L.circle(z.coord, {
-          color: z.color,
-          fillColor: z.color,
-          fillOpacity: 0.4,
-          radius: z.radio
-        }).addTo(map);
-      });
-    });
-  </script>
 </body>
 </html>
