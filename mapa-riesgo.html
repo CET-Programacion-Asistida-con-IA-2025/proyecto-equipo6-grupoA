@@ -47,9 +47,148 @@
 </div>
 
 <!-- Contenido principal -->
-<section class="section-container">
-  <h3>📍 Título destacado</h3>
-  <p>Texto o contenido principal de esta sección. Podés usar listas, imágenes, links o lo que necesites.</p>
+<section class="programa" id="programa">
+  <div class="container">
+    <h2>🗺️ Mapa de Riesgo de Inundaciones</h2>
+    
+   
+    <!--aca abajo deberia esta el mapa interactivo, pero se tendria q hacer con api q no se muy como se maneja-->
+    
+    <div class="mapa-container">
+      <h3>Mapa Interactivo de Buenos Aires</h3>
+      <div class="mapa-placeholder">
+        <div style="text-align: center; color: #1976d2;">
+          <h4>🗺️ Mapa Interactivo</h4>
+          <p>Aquí se mostrará el mapa con zonas de riesgo coloreadas</p>
+          <!--Próximamente: Integración con API de mapas-->
+        </div>
+      </div>
+      
+      <div class="leyenda">
+        <h4>Leyenda de Riesgo</h4>
+        <div class="leyenda-item">
+          <div class="color-indicator" style="background: #f44336;"></div>
+          <span><strong>Riesgo Alto:</strong> Zonas con historial de inundaciones frecuentes</span>
+        </div>
+        <div class="leyenda-item">
+          <div class="color-indicator" style="background: #ff9800;"></div>
+          <span><strong>Riesgo Medio:</strong> Zonas con drenaje deficiente</span>
+        </div>
+        <div class="leyenda-item">
+          <div class="color-indicator" style="background: #4caf50;"></div>
+          <span><strong>Riesgo Bajo:</strong> Zonas con buen sistema de desagüe</span>
+        </div>
+      </div>
+    </div>
+<p>
+  <br>
+</p>
+    <h3>Zonas de Mayor Riesgo en Buenos Aires</h3>
+    <div class="zonas-riesgo">
+      <div class="zona-card">
+        <span class="nivel-riesgo alto">RIESGO ALTO</span>
+        <h4>La Boca</h4>
+        <p>Zona baja cerca del Río de la Plata, con frecuentes anegamientos durante sudestadas y lluvias intensas.</p>
+        <p><strong>Última inundación:</strong> Marzo 2023</p>
+      </div>
+      <br>
+      <div class="zona-card">
+        <span class="nivel-riesgo alto">RIESGO ALTO</span>
+        <h4>Villa Lugano</h4>
+        <p>Problemas de drenaje y cercanía al Riachuelo generan inundaciones recurrentes en la zona.</p>
+        <p><strong>Última inundación:</strong> Enero 2023</p>
+      </div>
+      <br>
+      <div class="zona-card medio">
+        <span class="nivel-riesgo medio">RIESGO MEDIO</span>
+        <h4>Barracas</h4>
+        <p>Mejoras en infraestructura, pero aún presenta vulnerabilidades en tormentas intensas.</p>
+        <p><strong>Última inundación:</strong> Noviembre 2022</p>
+      </div>
+      <br>
+      <div class="zona-card medio">
+        <span class="nivel-riesgo medio">RIESGO MEDIO</span>
+        <h4>Parque Patricios</h4>
+        <p>Zona en proceso de mejora de desagües pluviales, riesgo moderado actual.</p>
+        <p><strong>Última inundación:</strong> Abril 2022</p>
+      </div>
+      <br>
+      <div class="zona-card bajo">
+        <span class="nivel-riesgo bajo">RIESGO BAJO</span>
+        <h4>Palermo</h4>
+        <p>Buena infraestructura de drenaje y mantenimiento regular de desagües.</p>
+        <p><strong>Estado:</strong> Sin eventos recientes</p>
+      </div>
+      
+      
+    </div>
+<br>
+    <h3>Estadísticas de Riesgo</h3>
+    <div class="estadisticas">
+      <div class="stat-card">
+        <div class="stat-number">48</div>
+        <p>Barrios monitoreados</p>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">12</div>
+        <p>Zonas de alto riesgo</p>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">156</div>
+        <p>Puntos críticos identificados</p>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">89%</div>
+        <p>Precisión del modelo</p>
+      </div>
+    </div>
+
+   
+    <div class="imagen-placeholder">
+        <!--aca podria ir una imagen con las estadisticas de los datos de arriba-->
+    </div>
+<br>
+    <div class="mapa-container">
+      <h3>¿Cómo funciona nuestro sistema?</h3>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+        <div>
+          <h4>🌧️ Datos Meteorológicos</h4>
+          <p>Integramos información del SMN y sensores locales para predecir riesgos.</p>
+        </div>
+        <div>
+          <h4>🏘️ Historial de Eventos</h4>
+          <p>Analizamos eventos pasados para identificar patrones y zonas vulnerables.</p>
+        </div>
+        <div>
+          <h4>🚰 Infraestructura</h4>
+          <p>Evaluamos el estado de desagües y obras hídricas en cada zona.</p>
+        </div>
+        <div>
+          <h4>👥 Reportes Ciudadanos</h4>
+          <p>Los vecinos reportan problemas que actualizan nuestro mapa en tiempo real.</p>
+        </div>
+      </div>
+    </div>
+<br>
+    <div class="mapa-container">
+      <h3>⚠️ Recomendaciones por Zona</h3>
+      <p><strong>Si vivís en zona de riesgo alto:</strong></p>
+      <ul>
+        <li>Mantené un kit de emergencia siempre listo</li>
+        <li>Suscribite a alertas meteorológicas</li>
+        <li>Conocé las rutas de evacuación</li>
+        <li>Reportá desagües tapados inmediatamente</li>
+      </ul>
+      
+      <p><strong>Si vivís en zona de riesgo medio:</strong></p>
+      <ul>
+        <li>Monitoreá el pronóstico regularmente</li>
+        <li>Tené documentos importantes en lugar elevado</li>
+        <li>Participá en simulacros vecinales</li>
+      </ul>
+    </div>
+
+  </div>
 </section>
 
 <!-- Footer -->
