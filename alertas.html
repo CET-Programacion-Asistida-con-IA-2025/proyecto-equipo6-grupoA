@@ -3,53 +3,108 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Nombre de la Página | Inundaciones BA</title>
+  <title>Alertas | Inundaciones BA</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
   <style>
-    .section-container {
+    .cards h3 {
+      font-size: 1.6rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .cards p {
+      margin-bottom: 1.5rem;
+      color: #444;
+    }
+
+    .contenido-section {
       background: #f5f9ff;
-      border-radius: 16px;
       padding: 2rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-      max-width: 800px;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      max-width: 900px;
       margin: 2rem auto;
     }
-    .section-container h3 {
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
+
+    .contenido-section h4 {
+      font-size: 1.2rem;
+      margin-top: 1.2rem;
+      margin-bottom: 0.6rem;
+      color: #d32f2f;
     }
-    .section-container p {
-      font-size: 1rem;
+
+    .contenido-section ul {
+      margin-bottom: 1rem;
+      padding-left: 1.2rem;
+    }
+
+    .contenido-section li {
+      margin-bottom: 0.5rem;
       color: #444;
+    }
+
+    .contenido-section em {
+      color: #555;
+      font-size: 0.85rem;
     }
   </style>
 </head>
 <body>
 
-<!-- Menú superior -->
+<!-- Menú de navegación -->
 <nav class="menu">
   <ul>
-    <li><a href="mapa-riesgo.html">Mapa de Riesgo</a></li>
-    <li><a href="guias-vecinales.html">Guías Vecinales</a></li>
-    <li><a href="reportes-ciudadanos.html">Reportes</a></li>
-    <li><a href="noticias.html">Noticias</a></li>
-    <li><a href="educacion.html">Educación</a></li>
-    <li><a href="alertas.html">Alertas</a></li>
+    <li><a href="#" onclick="cargarIframe('index.html')">Inicio</a></li>
+    <li><a href="#" onclick="cargarIframe('mapa-riesgo.html')">Mapa de Riesgo</a></li>
+    <li><a href="#" onclick="cargarIframe('guias-vecinales.html')">Guías Vecinales</a></li>
+    <li><a href="#" onclick="cargarIframe('reportes-ciudadanos.html')">Reportes</a></li>
+    <li><a href="#" onclick="cargarIframe('noticias.html')">Noticias</a></li>
+    <li><a href="#" onclick="cargarIframe('educacion.html')">Educación</a></li>
+    <li><a href="#" onclick="cargarIframe('alertas.html')">Alertas</a></li>
   </ul>
 </nav>
 
 <!-- Encabezado -->
 <div class="header">
   <div class="wave"></div>
-  <h1>📌 Nombre de la Sección</h1>
-  <p>Descripción breve o eslogan de esta página</p>
+  <h1>🚨 Alertas en Tiempo Real</h1>
+  <p>Información oficial sobre situaciones de riesgo y clima extremo</p>
 </div>
 
 <!-- Contenido principal -->
-<section class="section-container">
-  <h3>📍 Título destacado</h3>
-  <p>Texto o contenido principal de esta sección. Podés usar listas, imágenes, links o lo que necesites.</p>
+<section class="programa" id="programa">
+  <div class="container">
+    <div class="cards">
+      <div class="card contenido-section">
+        <h3>⚠️ Alertas Vigentes</h3>
+        <p>Actualización en tiempo real de alertas meteorológicas y operativas en la Ciudad de Buenos Aires.</p>
+
+        <h4>🔴 Alerta Roja – 9 de julio de 2025</h4>
+        <p>Tormentas intensas con ráfagas y granizo. Riesgo de anegamientos. Vigente entre las 17:00 y 23:00 hs.</p>
+
+        <h4>🌊 Zonas afectadas</h4>
+        <ul>
+          <li>Villa Lugano</li>
+          <li>Saavedra</li>
+          <li>Belgrano Bajo</li>
+          <li>La Boca</li>
+        </ul>
+
+        <h4>📢 Recomendaciones</h4>
+        <ul>
+          <li>Evitar circular por calles anegadas</li>
+          <li>No sacar la basura</li>
+          <li>Asegurar objetos en balcones y terrazas</li>
+          <li>Seguir canales oficiales del SMN y Defensa Civil</li>
+        </ul>
+
+        <h4>🏠 Centros de asistencia habilitados</h4>
+        <p>Club San Lorenzo (Av. Perito Moreno 1900) y Escuela N°12 (Barracas).</p>
+
+        <p><em>Última actualización: 9 de julio de 2025 – 15:30 hs</em></p>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- Footer -->
@@ -57,6 +112,12 @@
   <p>&copy; 2025 Inundaciones BA – Equipo 6A, Chicas en Tecnología</p>
   <p><strong>Integrantes:</strong> Yanella · Jazmín · Martina · Morena · Megan · Shirley</p>
 </footer>
+
+<script>
+  function cargarIframe(pagina) {
+    window.location.href = pagina;
+  }
+</script>
 
 </body>
 </html>

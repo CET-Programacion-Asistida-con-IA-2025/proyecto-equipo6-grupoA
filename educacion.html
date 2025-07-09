@@ -7,28 +7,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
   <style>
-    .noticia {
-      background: #f5f9ff;
-      padding: 1rem;
-      border-radius: 12px;
-      margin-bottom: 1rem;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      transition: transform 0.2s ease;
-    }
-    .noticia:hover {
-      transform: scale(1.02);
-    }
-    .noticia a {
-      font-weight: 600;
-      color: #007BFF;
-      font-size: 1.05rem;
-      text-decoration: none;
-    }
-    .noticia p, .noticia li {
-      font-size: 0.9rem;
-      color: #555;
-      margin-top: 6px;
-    }
     .cards h3 {
       font-size: 1.6rem;
       margin-bottom: 0.5rem;
@@ -37,19 +15,55 @@
       margin-bottom: 1.5rem;
       color: #444;
     }
-    .cards ul {
+
+    .contenido-section {
+      background: #f5f9ff;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      max-width: 900px;
+      margin: 2rem auto;
+    }
+
+    .contenido-section h4 {
+      font-size: 1.2rem;
+      margin-top: 1.2rem;
+      margin-bottom: 0.6rem;
+      color: #1976d2;
+    }
+
+    .contenido-section p {
+      margin-bottom: 1rem;
+      color: #333;
+      font-size: 0.95rem;
+    }
+
+    .contenido-section ul {
+      margin-bottom: 1rem;
       padding-left: 1.2rem;
     }
-    .cards a:hover {
+
+    .contenido-section li {
+      margin-bottom: 0.5rem;
+      color: #444;
+    }
+
+    .contenido-section a {
+      color: #007BFF;
+      text-decoration: none;
+    }
+
+    .contenido-section a:hover {
       text-decoration: underline;
     }
   </style>
 </head>
 <body>
 
-<!-- Menú principal -->
+<!-- Menú de navegación -->
 <nav class="menu">
   <ul>
+    <li><a href="#" onclick="cargarIframe('index.html')">Inicio</a></li>
     <li><a href="#" onclick="cargarIframe('mapa-riesgo.html')">Mapa de Riesgo</a></li>
     <li><a href="#" onclick="cargarIframe('guias-vecinales.html')">Guías Vecinales</a></li>
     <li><a href="#" onclick="cargarIframe('reportes-ciudadanos.html')">Reportes</a></li>
@@ -62,60 +76,50 @@
 <!-- Encabezado -->
 <div class="header">
   <div class="wave"></div>
-  <h1>📘 Educación para la Prevención</h1>
-  <p>Concientización: aprender para estar preparados</p>
+  <h1>📚 Educación sobre Inundaciones</h1>
+  <p>Aprendé cómo actuar antes, durante y después de una emergencia hídrica</p>
 </div>
 
-<!-- Contenido unificado -->
-<section class="programa" id="educacion">
+<!-- Contenido principal -->
+<section class="programa" id="programa">
   <div class="container">
     <div class="cards">
-      <div class="card noticia">
-        <h3>👩‍🏫 Concientización: Aprender para estar preparados</h3>
-        <p>
-          Las inundaciones afectan cada vez más a nuestros barrios, y muchas veces no contamos con
-          la información necesaria para saber qué hacer antes, durante y después de una emergencia.
-        </p>
-        <p>
-          Esta sección está pensada como un espacio educativo para niños, jóvenes, familias y
-          escuelas, con recursos simples y visuales que ayudan a comprender el fenómeno de las
-          inundaciones y cómo cuidarnos entre todos.
-        </p>
-        <p>
-          Encontrá juegos, infografías y materiales visuales que ayudan a aprender de forma didáctica y accesible:
-        </p>
-        <ul>
-          <li>❓ ¿Por qué se inunda nuestro barrio?</li>
-          <li>✅ ¿Cómo podemos prepararnos?</li>
-          <li>💪 ¿Cómo nos recuperamos después?</li>
-        </ul>
-      </div>
+      <div class="card contenido-section">
+        <h3>🎓 Educación para la prevención</h3>
+        <p>La educación es una herramienta clave para reducir riesgos y salvar vidas ante inundaciones. Esta sección ofrece información clara y accesible para docentes, estudiantes, familias y vecinas/os.</p>
 
-      <div class="card noticia">
-        <h3>🎮 Juegos Educativos</h3>
-        <ul>
-          <li><strong>Stop Disasters:</strong> Simulador para reducir riesgos de desastres.<br/>
-            <a href="https://www.stopdisastersgame.org/game/" target="_blank">Jugar ahora</a></li>
-          <li><strong>Build a Kit:</strong> Armá tu propio kit de emergencia.<br/>
-            <a href="https://www.ready.gov/kids/games/data/bak-spanish/index.html" target="_blank">Jugar ahora</a></li>
-          <li><strong>Froggy Jumps:</strong> Juego de preguntas sobre inundaciones.<br/>
-            <a href="https://es.educaplay.com/recursos-educativos/19592039-desafio_de_inundaciones.html" target="_blank">Jugar ahora</a></li>
-          <li><strong>Sopa de Letras:</strong> Palabras clave sobre inundaciones.<br/>
-            <a href="https://es.educaplay.com/recursos-educativos/20846830-inundaciones_mach.html" target="_blank">Jugar ahora</a></li>
-        </ul>
-      </div>
+        <h4>🌊 ¿Qué es una inundación?</h4>
+        <p>Es la acumulación de agua en zonas que normalmente están secas, producto de lluvias intensas, ríos desbordados o problemas de drenaje urbano. En Buenos Aires, muchos barrios son vulnerables debido a su ubicación y falta de infraestructura adecuada.</p>
 
-      <div class="card noticia">
-        <h3>📺 Material Visual y Didáctico</h3>
+        <h4>🧠 ¿Por qué educar sobre inundaciones?</h4>
         <ul>
-          <li><strong>Gregorio:</strong> Historieta para niños. Autor: César Carrizo.<br/>
-            <a href="https://lahistorietaenlaescuela.blogspot.com/2015/03/gregorio-una-historieta-para-que-los.html" target="_blank">Ver historieta</a></li>
-          <li><strong>Video educativo:</strong> "Inundación - Historias de aprendizaje"<br/>
-            <a href="https://www.youtube.com/watch?v=KpZi2xuJmAY" target="_blank">Ver video</a></li>
-          <li><strong>Kit de emergencia:</strong> Qué debe contener y cómo armarlo.<br/>
-            <a href="https://www.youtube.com/watch?v=ljnRIz7HjgI" target="_blank">Ver video</a></li>
+          <li>Ayuda a preparar a la comunidad ante emergencias.</li>
+          <li>Reduce el impacto de los desastres naturales.</li>
+          <li>Promueve una ciudadanía más informada y responsable.</li>
         </ul>
-        <p><strong>💡 Educar es prevenir:</strong> Cualquier persona puede aprender y actuar frente a una inundación.</p>
+
+        <h4>🎒 Para estudiantes</h4>
+        <ul>
+          <li>Conocé las zonas de evacuación de tu barrio y escuela.</li>
+          <li>No camines por calles inundadas: puede haber pozos o corriente.</li>
+          <li>Armá una mochila de emergencia con linterna, agua, documentos, etc.</li>
+        </ul>
+
+        <h4>🏫 Para docentes</h4>
+        <ul>
+          <li>Realizar simulacros y charlas educativas en clase.</li>
+          <li>Trabajar con mapas barriales de riesgo.</li>
+          <li>Usar recursos del Gobierno de la Ciudad, Defensa Civil y el SMN.</li>
+        </ul>
+
+        <h4>📎 Recursos útiles</h4>
+        <ul>
+          <li><a href="https://www.argentina.gob.ar/educacion/recursos-para-la-prevencion" target="_blank">Ministerio de Educación - Recursos preventivos</a></li>
+          <li><a href="https://www.smn.gob.ar/" target="_blank">SMN - Servicio Meteorológico Nacional</a></li>
+          <li><a href="https://buenosaires.gob.ar/emergencias" target="_blank">Gobierno de la Ciudad - Emergencias</a></li>
+        </ul>
+
+        <p>📢 Compartí esta información en tu escuela, con tu familia y tus amigas/os. Estar informado salva vidas.</p>
       </div>
     </div>
   </div>

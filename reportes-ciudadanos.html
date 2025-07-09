@@ -2,40 +2,128 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Nombre de la Página | Inundaciones BA</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Reportes Ciudadanos | Inundaciones BA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <style>
-    .section-container {
+    /* Basado en la plantilla de referencia */
+    .cards h3 {
+      font-size: 1.6rem;
+      margin-bottom: 0.5rem;
+    }
+    .cards p {
+      margin-bottom: 1.5rem;
+      color: #444;
+    }
+    .contenido-section {
       background: #f5f9ff;
-      border-radius: 16px;
       padding: 2rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-      max-width: 800px;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      max-width: 900px;
       margin: 2rem auto;
     }
-    .section-container h3 {
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
+    .contenido-section h4 {
+      font-size: 1.2rem;
+      margin-top: 1.2rem;
+      margin-bottom: 0.6rem;
+      color: #1976d2;
     }
-    .section-container p {
-      font-size: 1rem;
+    .contenido-section p {
+      margin-bottom: 1rem;
+      color: #333;
+      font-size: 0.95rem;
+    }
+    .contenido-section ul {
+      margin-bottom: 1rem;
+      padding-left: 1.2rem;
+    }
+    .contenido-section li {
+      margin-bottom: 0.5rem;
       color: #444;
+    }
+    
+    /* Ajustes propios para el formulario */
+    .report-form form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .form-row {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .form-group {
+      flex: 1;
+      min-width: 200px;
+      display: flex;
+      flex-direction: column;
+    }
+    label {
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+      color: #1976d2;
+    }
+    input[type="text"],
+    input[type="tel"],
+    input[type="time"],
+    select,
+    textarea {
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-family: 'Poppins', sans-serif;
+      resize: vertical;
+    }
+    textarea {
+      min-height: 80px;
+    }
+    .submit-btn {
+      background-color: #1976d2;
+      color: white;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 12px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      align-self: flex-start;
+      transition: background-color 0.3s ease;
+    }
+    .submit-btn:hover {
+      background-color: #0d47a1;
+    }
+
+    /* Estilo para la alerta de emergencia */
+    .emergency-alert {
+      max-width: 900px;
+      margin: 2rem auto;
+      background: #ffdddd;
+      border-left: 6px solid #f44336;
+      padding: 1rem 1.5rem;
+      border-radius: 8px;
+      color: #a94442;
+      font-weight: 700;
+      font-family: 'Poppins', sans-serif;
+      box-shadow: 0 2px 8px rgba(244, 67, 54, 0.2);
     }
   </style>
 </head>
 <body>
 
-<!-- Menú superior -->
+<!-- Menú de navegación -->
 <nav class="menu">
   <ul>
-    <li><a href="mapa-riesgo.html">Mapa de Riesgo</a></li>
-    <li><a href="guias-vecinales.html">Guías Vecinales</a></li>
-    <li><a href="reportes-ciudadanos.html">Reportes</a></li>
-    <li><a href="noticias.html">Noticias</a></li>
-    <li><a href="educacion.html">Educación</a></li>
-    <li><a href="alertas.html">Alertas</a></li>
+    <li><a href="#" onclick="cargarIframe('index.html')">Inicio</a></li>
+    <li><a href="#" onclick="cargarIframe('mapa-riesgo.html')">Mapa de Riesgo</a></li>
+    <li><a href="#" onclick="cargarIframe('guias-vecinales.html')">Guías Vecinales</a></li>
+    <li><a href="#" onclick="cargarIframe('reportes-ciudadanos.html')">Reportes</a></li>
+    <li><a href="#" onclick="cargarIframe('noticias.html')">Noticias</a></li>
+    <li><a href="#" onclick="cargarIframe('educacion.html')">Educación</a></li>
+    <li><a href="#" onclick="cargarIframe('alertas.html')">Alertas</a></li>
   </ul>
 </nav>
 
@@ -46,131 +134,120 @@
   <p>Reporta y mantente informado</p>
 </div>
 
-<br>
-
-  <div class="emergency-alert">
-    <strong>⚠️ EMERGENCIA ACTIVA</strong><br>
-    Si estás en peligro inmediato, llama al 911. Para emergencias hídricas: 147
-  </div>
-  
-<br>
-
-  <div class="main-content">
-    <div class="card">
-      <h3>📢 Reportes en Tiempo Real</h3>
-      <p>Tu reporte ayuda a otros vecinos y a las autoridades a actuar rápidamente ante situaciones de inundación.</p>
-      <p><strong>Información importante:</strong> Incluye ubicación exacta, nivel de agua y situación actual.</p>
-    </div>
-
-<br>
-<!--
-    <div class="card">
-      <h3>🚨 Estado Actual</h3>
-      <p><span class="status-indicator status-medium"></span><strong>Alerta Amarilla</strong> en zonas bajas</p>
-      <p><span class="status-indicator status-low"></span><strong>Normal</strong> en zona norte</p>
-      <p><span class="status-indicator status-high"></span><strong>Crítico</strong> en La Boca y Barracas</p>
-      <p><small>Actualizado: <span id="last-update">Hace 15 minutos</span></small></p>
-    </div>
-  -->
-    <div class="report-form">
-      <h3>📝 Crear Nuevo Reporte - si tu barrio no esta en las opciones o sos de provincia especificar barrio/zona en "Descripción detallada"</h3>
-      <form id="reportForm">
-        <div class="form-row">
-          <div class="form-group">
-            <label for="barrio">Barrio *</label>
-            <select id="barrio" required>
-              <option value="">Selecciona tu barrio</option>
-              <option value="puerto-madero">Puerto Madero</option>
-              <option value="la-boca">La Boca</option>
-              <option value="barracas">Barracas</option>
-              <option value="san-telmo">San Telmo</option>
-              <option value="monserrat">Monserrat</option>
-              <option value="constitucion">Constitución</option>
-              <option value="recoleta">Recoleta</option>
-              <option value="palermo">Palermo</option>
-              <option value="caballito">Caballito</option>
-              <option value="belgrano">Belgrano</option>
-              <option value="villa-crespo">Villa Crespo</option>
-              <option value="parque-avellaneda">Parque Avellaneda</option>
-              <option value="otro">Otro</option>
-            </select>
-          </div>
-          
-          <div class="form-group">
-            <label for="severidad">Nivel de Severidad *</label>
-            <select id="severidad" required>
-              <option value="">Selecciona severidad</option>
-              <option value="baja">🟢 Baja - Charcos, tránsito normal</option>
-              <option value="media">🟡 Media - Agua hasta tobillo</option>
-              <option value="alta">🔴 Alta - Agua hasta rodilla o más</option>
-              <option value="critica">🚨 Crítica - Peligro inmediato</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label for="direccion">Dirección Exacta *</label>
-          <input type="text" id="direccion" placeholder="Ej: Av. Corrientes 1234" required>
-        </div>
-
-        <div class="form-row">
-          <div class="form-group">
-            <label for="contacto">Teléfono de Contacto</label>
-            <input type="tel" id="contacto" placeholder="11-1234-5678">
-          </div>
-          
-          <div class="form-group">
-            <label for="hora">Hora del Incidente</label>
-            <input type="time" id="hora">
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label for="descripcion">Descripción Detallada *</label>
-          <textarea id="descripcion" rows="4" placeholder="Describe la situación: nivel de agua, calles afectadas, vehículos varados, etc." required></textarea>
-        </div>
-
-        <button type="submit" class="submit-btn">📤 Enviar Reporte</button>
-      </form>
-    </div>
-  </div>
-
-<br>
-
-  <div class="info-cards">
-    <div class="info-card">
-      <h4>🚨 Emergencias</h4>
-      <p><strong>911</strong> - Emergencias generales</p>
-      <p><strong>147</strong> - Emergencias hídricas</p>
-    </div>
-
-    <br>
-
-    <div class="info-card">
-      <h4>📍 Centros de Evacuación</h4>
-      <p>
-        <ul>
-      <li><strong>Zona Sur:</strong> Polideportivo Osvaldo Ardiles (Av. Regimiento de Patricios 1333)</li>
-      <li><strong>Zona Centro:</strong> Centro Cultural Recoleta (Junín 1930)</li>
-      <li><strong>Zona Norte:</strong> Club Ciudad de Buenos Aires (Av. Elcano 3333)</li>
-      <li><strong>Zona Oeste:</strong> Polideportivo Flores (Av. Directorio 4447)</li>
-    </ul>
-      </p>
-      
-    </div>
-    
-   <section>
-    <h2>🌐 Información Oficial</h2>
-    <!--aca deberia esta la informacion de paginas oficiales-->
-  </section>
-  </div>
+<!-- Alerta de emergencia -->
+<div class="emergency-alert">
+  ⚠️ EMERGENCIA ACTIVA<br />
+  Si estás en peligro inmediato, llama al 911. Para emergencias hídricas: 147
 </div>
+
+<!-- Contenido principal -->
+<section class="programa" id="programa">
+  <div class="container">
+    <div class="cards">
+      <div class="card contenido-section">
+
+        <h3>📢 Reportes en Tiempo Real</h3>
+        <p>Tu reporte ayuda a otros vecinos y a las autoridades a actuar rápidamente ante situaciones de inundación.</p>
+        <p><strong>Información importante:</strong> Incluye ubicación exacta, nivel de agua y situación actual.</p>
+
+        <h3>📝 Crear Nuevo Reporte</h3>
+        <p>Si tu barrio no está en las opciones o sos de provincia, especificá barrio/zona en "Descripción detallada".</p>
+        <div class="report-form">
+          <form id="reportForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="barrio">Barrio *</label>
+                <select id="barrio" required>
+                  <option value="">Selecciona tu barrio</option>
+                  <option value="puerto-madero">Puerto Madero</option>
+                  <option value="la-boca">La Boca</option>
+                  <option value="barracas">Barracas</option>
+                  <option value="san-telmo">San Telmo</option>
+                  <option value="monserrat">Monserrat</option>
+                  <option value="constitucion">Constitución</option>
+                  <option value="recoleta">Recoleta</option>
+                  <option value="palermo">Palermo</option>
+                  <option value="caballito">Caballito</option>
+                  <option value="belgrano">Belgrano</option>
+                  <option value="villa-crespo">Villa Crespo</option>
+                  <option value="parque-avellaneda">Parque Avellaneda</option>
+                  <option value="otro">Otro</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="severidad">Nivel de Severidad *</label>
+                <select id="severidad" required>
+                  <option value="">Selecciona severidad</option>
+                  <option value="baja">🟢 Baja - Charcos, tránsito normal</option>
+                  <option value="media">🟡 Media - Agua hasta tobillo</option>
+                  <option value="alta">🔴 Alta - Agua hasta rodilla o más</option>
+                  <option value="critica">🚨 Crítica - Peligro inmediato</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="direccion">Dirección Exacta *</label>
+              <input type="text" id="direccion" placeholder="Ej: Av. Corrientes 1234" required />
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contacto">Teléfono de Contacto</label>
+                <input type="tel" id="contacto" placeholder="11-1234-5678" />
+              </div>
+              <div class="form-group">
+                <label for="hora">Hora del Incidente</label>
+                <input type="time" id="hora" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="descripcion">Descripción Detallada *</label>
+              <textarea id="descripcion" rows="4" placeholder="Describe la situación: nivel de agua, calles afectadas, vehículos varados, etc." required></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">📤 Enviar Reporte</button>
+          </form>
+        </div>
+
+        <h3>🚨 Emergencias y Centros de Evacuación</h3>
+
+        <h4>Emergencias</h4>
+        <ul>
+          <li><strong>911</strong> - Emergencias generales</li>
+          <li><strong>147</strong> - Emergencias hídricas</li>
+        </ul>
+
+        <h4>Centros de Evacuación</h4>
+        <ul>
+          <li><strong>Zona Sur:</strong> Polideportivo Osvaldo Ardiles (Av. Regimiento de Patricios 1333)</li>
+          <li><strong>Zona Centro:</strong> Centro Cultural Recoleta (Junín 1930)</li>
+          <li><strong>Zona Norte:</strong> Club Ciudad de Buenos Aires (Av. Elcano 3333)</li>
+          <li><strong>Zona Oeste:</strong> Polideportivo Flores (Av. Directorio 4447)</li>
+        </ul>
+
+        <section>
+          <h3>🌐 Información Oficial</h3>
+          <!-- Aquí podría ir la información de páginas oficiales -->
+        </section>
+
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- Footer -->
 <footer>
   <p>&copy; 2025 Inundaciones BA – Equipo 6A, Chicas en Tecnología</p>
   <p><strong>Integrantes:</strong> Yanella · Jazmín · Martina · Morena · Megan · Shirley</p>
 </footer>
+
+<script>
+  function cargarIframe(pagina) {
+    window.location.href = pagina;
+  }
+</script>
 
 </body>
 </html>
