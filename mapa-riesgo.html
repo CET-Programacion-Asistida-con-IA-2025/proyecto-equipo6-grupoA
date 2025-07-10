@@ -98,7 +98,67 @@
     <div class="cards">
       <div class="card contenido-section">
         <h3>🗺️ Mapa Interactivo</h3>
-        <p>Aquí se mostrará el mapa con zonas de riesgo coloreadas.</p>
+       <!-- Mapa interactivo con zonas de riesgo simuladas -->
+<div id="mapa-simulacion" style="height: 500px; width: 100%; border-radius: 15px; margin-bottom: 2rem;"></div>
+
+<!-- Leaflet CDN y script del mapa -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const map = L.map('mapa-simulacion').setView([-34.61, -58.38], 12); // CABA centro
+
+    // Mapa base
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    // Datos simulados de zonas inundadas
+    const zonas = [
+      {
+        nombre: "La Boca",
+        coords: [-34.6345, -58.3630],
+        color: "#e53935",
+        mensaje: "Riesgo alto: Inundación severa en marzo 2023"
+      },
+      {
+        nombre: "Villa Lugano",
+        coords: [-34.6796, -58.4724],
+        color: "#d32f2f",
+        mensaje: "Riesgo alto: Crítica en enero 2023"
+      },
+      {
+        nombre: "Barracas",
+        coords: [-34.6398, -58.3768],
+        color: "#fbc02d",
+        mensaje: "Riesgo medio: lluvias intensas en nov. 2022"
+      },
+      {
+        nombre: "Parque Patricios",
+        coords: [-34.6306, -58.4014],
+        color: "#f9a825",
+        mensaje: "Riesgo medio: obras de mejora en curso"
+      },
+      {
+        nombre: "Palermo",
+        coords: [-34.5783, -58.4261],
+        color: "#43a047",
+        mensaje: "Riesgo bajo: sin eventos recientes"
+      }
+    ];
+
+    zonas.forEach(z => {
+      L.circle(z.coords, {
+        color: z.color,
+        fillColor: z.color,
+        fillOpacity: 0.4,
+        radius: 600
+      }).addTo(map).bindPopup(`<strong>${z.nombre}</strong><br>${z.mensaje}`);
+    });
+  });
+</script>
+
 
         <h4>Leyenda de Riesgo</h4>
         <ul>
