@@ -93,24 +93,6 @@
   <p><strong>Integrantes:</strong> Yanella · Jazmín · Martina · Morena · Megan · Shirley</p>
 </footer>
 
-<!-- Script principal -->
-
-  function submitFeedback(respuesta) {
-    const mensaje = document.getElementById('feedbackMessage');
-    const botones = document.querySelectorAll('.feedback-btn');
-    
-    botones.forEach(btn => {
-      btn.disabled = true;
-      btn.style.opacity = '0.5';
-      btn.style.cursor = 'not-allowed';
-    });
-
-    mensaje.style.display = 'block';
-    mensaje.innerHTML = respuesta === 'si'
-      ? '<p>¡Excelente! Nos alegra que la guía te haya sido útil 🌟</p>'
-      : '<p>Gracias por tu feedback. Trabajaremos para mejorar 🔧</p>';
-  }
-
   <script src="script.js"></script>
 
 </body>
