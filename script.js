@@ -1,3 +1,25 @@
+// Navegación del menú principal
+function cargarIframe(pagina) {
+  window.location.href = pagina;
+}
+
+// Feedback del usuario en la guía vecinal
+function submitFeedback(respuesta) {
+  const mensaje = document.getElementById('feedbackMessage');
+  const botones = document.querySelectorAll('.feedback-btn');
+
+  botones.forEach(btn => {
+    btn.disabled = true;
+    btn.style.opacity = '0.5';
+    btn.style.cursor = 'not-allowed';
+  });
+
+  mensaje.style.display = 'block';
+  mensaje.innerHTML = respuesta === 'si'
+    ? '<p>¡Excelente! Nos alegra que la guía te haya sido útil 🌟</p>'
+    : '<p>Gracias por tu feedback. Trabajaremos para mejorar 🔧</p>';
+}
+
 // 🚀 Scroll suave para enlaces internos
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener("click", function(e) {
@@ -16,13 +38,6 @@ if (botonHero) {
     console.log("Botón principal clickeado: scroll activado.");
   });
 }
-
-// 💡 Alerta al hacer clic en las tarjetas (cards)
-document.querySelectorAll('.card').forEach(card => {
-  card.addEventListener('click', () => {
-    alert("📣 Esta sección estará disponible muy pronto. ¡Gracias por tu interés!");
-  });
-});
 
 // ✨ Animación suave cuando los tips aparecen en pantalla
 const tips = document.querySelectorAll('.tip');
@@ -89,3 +104,4 @@ function submitFeedback(response) {
     feedbackMessage.innerHTML = '<p>Gracias por tu feedback. Trabajaremos para mejorar 🔧</p>';
   }
 }
+

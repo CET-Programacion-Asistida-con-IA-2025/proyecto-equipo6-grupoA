@@ -9,14 +9,15 @@
 </head>
 <body>
 
+<!-- Menú de navegación -->
 <nav class="menu">
   <ul>
-    <li><a href="#" onclick="cargarIframe('index.html')"> Inicio</a></li>
-    <li><a href="#" onclick="cargarIframe('mapa-riesgo.html')">Mapa de Riesgo</a></li>
-    <li><a href="#" onclick="cargarIframe('guias-vecinales.html')">Guías Vecinales</a></li>
-    <li><a href="#" onclick="cargarIframe('reportes-ciudadanos.html')">Reportes</a></li>
-    <li><a href="#" onclick="cargarIframe('noticias.html')">Noticias</a></li>
-    <li><a href="#" onclick="cargarIframe('educacion.html')">Educación</a></li>
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="mapa-riesgo.html">Mapa de Riesgo</a></li>
+    <li><a href="guias-vecinales.html">Guías Vecinales</a></li>
+    <li><a href="reportes-ciudadanos.html">Reportes</a></li>
+    <li><a href="noticias.html">Noticias</a></li>
+    <li><a href="educacion.html">Educación</a></li>
   </ul>
 </nav>
 
@@ -93,10 +94,6 @@
 </footer>
 
 <!-- Script principal -->
-<script>
-  function cargarIframe(pagina) {
-    window.location.href = pagina;
-  }
 
   function submitFeedback(respuesta) {
     const mensaje = document.getElementById('feedbackMessage');
@@ -113,7 +110,8 @@
       ? '<p>¡Excelente! Nos alegra que la guía te haya sido útil 🌟</p>'
       : '<p>Gracias por tu feedback. Trabajaremos para mejorar 🔧</p>';
   }
-</script>
+
+  <script src="script.js"></script>
 
 </body>
 </html>
